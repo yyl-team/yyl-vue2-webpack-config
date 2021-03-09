@@ -1,0 +1,74 @@
+{
+  "name": "base",
+  "description": "webpack seed for yyl",
+  "license": "ISC",
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "commonjs": true
+    },
+    "extends": [
+      "yyl-vue"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "/build",
+    "/dist",
+    "/test",
+    "**/js/lib"
+  ],
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": true,
+    "arrowParens": "always",
+    "quoteProps": "consistent"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "8.3.5",
+    "@commitlint/config-conventional": "8.0.0",
+    "eslint": "6.8.0",
+    "eslint-config-yyl-vue": "0.2.10",
+    "eslint-plugin-vue": "6.2.2",
+    "git-cz": "4.3.1",
+    "husky": "3.0.0",
+    "prettier": "1.19.1",
+    "pretty-quick": "2.0.1"
+  },
+  "scripts": {
+    "eslint": "eslint --ext=vue,js ./",
+    "eslint:fix": "eslint --fix --ext=vue,js ./",
+    "prettier": "prettier --write ./**/*.{vue,js}",
+    "o": "webpack",
+    "d": "webpack-cli serve --env tips=true"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.11.5",
+    "vue": "2.6.12",
+    "vue-router": "^3.0.2",
+    "vue-style-loader": "^4.1.2",
+    "vuex": "^3.1.0",
+    "webpack": "5.24.3",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "4.0.0-beta.0",
+    "webpack-merge": "^5.7.3"
+  },
+  "version": "1.0.0",
+  "main": "index.js"
+}

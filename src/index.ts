@@ -10,7 +10,7 @@ function yylVue2WebpackConfig(op: YylBaseInitConfigOption): Configuration {
       rules: [
         {
           test: /\.vue$/,
-          loader: require.resolve('vue-loader')
+          use: [require.resolve('vue-loader')]
         }
       ]
     },
@@ -23,10 +23,10 @@ function yylVue2WebpackConfig(op: YylBaseInitConfigOption): Configuration {
       plugins: []
     },
     plugins: [
-      new VueLoaderPlugin() as WebpackPluginInstance
-      // new ProvidePlugin({
-      //   Vue: ['vue/dist/vue.esm.js', 'default']
-      // })
+      new VueLoaderPlugin() as WebpackPluginInstance,
+      new ProvidePlugin({
+        Vue: ['vue/dist/vue.esm.js', 'default']
+      })
     ]
   }
   const baseConfig = yylBaseInitConfig(op)

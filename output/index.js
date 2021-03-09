@@ -7,6 +7,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
 var yylBaseInitConfig = require('yyl-base-webpack-config');
 var vueLoader = require('vue-loader');
@@ -21,7 +22,7 @@ function yylVue2WebpackConfig(op) {
             rules: [
                 {
                     test: /\.vue$/,
-                    loader: require.resolve('vue-loader')
+                    use: [require.resolve('vue-loader')]
                 }
             ]
         },
@@ -34,10 +35,10 @@ function yylVue2WebpackConfig(op) {
             plugins: []
         },
         plugins: [
-            new vueLoader.VueLoaderPlugin()
-            // new ProvidePlugin({
-            //   Vue: ['vue/dist/vue.esm.js', 'default']
-            // })
+            new vueLoader.VueLoaderPlugin(),
+            new webpack.ProvidePlugin({
+                Vue: ['vue/dist/vue.esm.js', 'default']
+            })
         ]
     };
     const baseConfig = yylBaseInitConfig__default['default'](op);

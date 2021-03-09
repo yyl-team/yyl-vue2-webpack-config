@@ -49,14 +49,16 @@
     "git-cz": "4.3.1",
     "husky": "3.0.0",
     "prettier": "1.19.1",
-    "pretty-quick": "2.0.1"
+    "pretty-quick": "2.0.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "4.0.0-beta.0"
   },
   "scripts": {
     "eslint": "eslint --ext=vue,js ./",
     "eslint:fix": "eslint --fix --ext=vue,js ./",
     "prettier": "prettier --write ./**/*.{vue,js}",
-    "o": "webpack",
-    "d": "webpack-cli serve --env tips=true"
+    "o": "cd ../../ & npm run cba",
+    "d": "cd ../../ & npm run cbw"
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
@@ -64,9 +66,7 @@
     "vue-router": "^3.0.2",
     "vue-style-loader": "^4.1.2",
     "vuex": "^3.1.0",
-    "webpack": "5.24.3",
-    "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "4.0.0-beta.0",
+    "webpack": "^5.24.4",
     "webpack-merge": "^5.7.3"
   },
   "version": "1.0.0",

@@ -8,7 +8,7 @@ module.exports = (env) => {
       context: __dirname,
       env,
       alias: {
-        '~': path.join(__dirname, './src'),
+        '@': path.join(__dirname, './src'),
         '~@': path.join(__dirname, './src/components/')
       },
       yylConfig: {

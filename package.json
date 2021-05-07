@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "output/index.js",
   "types": "output/index.d.ts",
   "eslintConfig": {
@@ -60,7 +60,7 @@
     "webpack": "5.24.3",
     "webpack-cli": "4.5.0",
     "webpack-dev-server": "4.0.0-beta.0",
-    "yyl-base-webpack-config": "^0.1.4"
+    "yyl-base-webpack-config": "^0.2.0"
   },
   "name": "yyl-vue2-webpack-config",
   "license": "MIT",

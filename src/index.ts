@@ -1,10 +1,10 @@
 import { Configuration, WebpackPluginInstance, ProvidePlugin } from 'webpack'
 import { merge } from 'webpack-merge'
-import yylBaseInitConfig, { YylBaseInitConfigOption } from 'yyl-base-webpack-config'
+import { initYylBaseConfig, InitYylBaseConfigOption } from 'yyl-base-webpack-config'
 import { VueLoaderPlugin } from 'vue-loader'
 
 export type WConfigVue2Result = Required<Pick<Configuration, 'module' | 'resolve' | 'plugins'>>
-function yylVue2WebpackConfig(op: YylBaseInitConfigOption): Configuration {
+function yylVue2WebpackConfig(op: InitYylBaseConfigOption): Configuration {
   const wConfig: WConfigVue2Result = {
     module: {
       rules: [
@@ -29,7 +29,7 @@ function yylVue2WebpackConfig(op: YylBaseInitConfigOption): Configuration {
       })
     ]
   }
-  const baseConfig = yylBaseInitConfig(op)
+  const baseConfig = initYylBaseConfig(op)
   return merge(baseConfig, wConfig as Configuration)
 }
 

@@ -1,5 +1,10 @@
 # 版本变更
 
+## 0.2.1 (2021-05-16)
+
+- feat: 补充 `css-loader` 依赖
+- feat: 更新 `yyl-base-webpack-config@0.2.2`
+
 ## 0.2.0 (2021-05-07)
 
 - feat: 更新 `yyl-base-webpack-config@0.2.0`

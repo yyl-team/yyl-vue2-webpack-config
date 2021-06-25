@@ -1,4 +1,4 @@
-import { Configuration, WebpackPluginInstance, ProvidePlugin } from 'webpack'
+import { Configuration, WebpackPluginInstance, ProvidePlugin, EntryNormalized } from 'webpack'
 import { merge } from 'webpack-merge'
 import { initYylBaseConfig, InitYylBaseConfigOption } from 'yyl-base-webpack-config'
 import { VueLoaderPlugin } from 'vue-loader'
@@ -30,7 +30,7 @@ function yylVue2WebpackConfig(op: InitYylBaseConfigOption): Configuration {
     ]
   }
   const baseConfig = initYylBaseConfig(op)
-  return merge(baseConfig, wConfig as Configuration)
+  return merge(baseConfig, wConfig as any)
 }
 
 export default yylVue2WebpackConfig

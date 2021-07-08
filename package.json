@@ -35,7 +35,8 @@
     "prepublishOnly": "npm run prettier && npm test",
     "test": "npm run build && jest ./test/jest/",
     "cba": "webpack -c ./test/case/base/webpack.config.js",
-    "cbw": "webpack-cli serve --env tips=true --env hmr=true -c ./test/case/base/webpack.config.js"
+    "cbw": "webpack-cli serve --env tips=true --env hmr=true -c ./test/case/base/webpack.config.js",
+    "cbe": "webpack-cli serve --env tips=true --env hmr=true --env esbuild=true -c ./test/case/base/webpack.config.js"
   },
   "peerDependencies": {
     "webpack": ">=5.24.0",

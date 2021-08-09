@@ -1,5 +1,9 @@
 # 版本变更
 
+## 0.3.1 (2021-07-09)
+
+- feat: dependence 版本锁定
+
 ## 0.3.0 (2021-07-09)
 
 - feat: 更新 `yyl-base-webpack-config@0.3.0`
